@@ -213,3 +213,75 @@ body{
     width: 500px;
     height: 30px;
 }
+
+  /* Responsivo */
+  
+  @media (max-width: 768px) {
+    .menu {
+      flex-direction: column;
+    }
+    .displayleft {
+      width: 600px;
+    }
+    .displayright {
+      width: 500px;
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .menu {
+      padding: 0.5em;
+      margin-bottom: 50px;
+    }
+    .org {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      width: 100%;
+      }
+
+    .displayleft {
+      padding: 1em;
+      width: 300px;
+    }
+     
+    .displayright{
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: center;
+        max-width: 330px; 
+        margin: 10px 0;
+        padding: 15px;
+        box-sizing: border-box;
+      }
+
+    .about, .work{
+        width: 300px;
+    }
+
+    .texts{
+       align-items: center
+    }
+
+    #Paragrafo1{
+       width: 300px;
+    }
+
+    #title1, #title2 {
+      font-size: 1.5em;
+    }
+   
+    #Tabout, #TMywork {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+      }
+
+    #Paragrafo2, #Paragrafo3{
+        font-size: 12px;
+    }
+
+    .org1{
+     width: 300px;
+    }
+  }
