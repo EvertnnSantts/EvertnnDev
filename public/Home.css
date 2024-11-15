@@ -21,19 +21,16 @@ body{
   padding: 0 20px;
   box-sizing: border-box;
 }
-
 .dropdown {
     position: relative;
     display: inline-block;
 }
-
 .dropdown-content {
     display: none;
     position: absolute;
     min-width: 120px;
     z-index: 1;
 }
-
 .dropdown-content a {
     color: white;
     padding: 10px 15px;
@@ -48,12 +45,10 @@ body{
 .dropdown-content a:hover {
     background-color: rgba(9, 1, 27, 1)s;
 }
-
 .dropdown:hover .dropdown-content {
     display: block;
     transition: 1s;
 }
-
 .menu-left {
     font-size: 30px;
     font-family: "Roboto", sans-serif;
@@ -61,8 +56,6 @@ body{
     font-style: normal;
     color: aliceblue;
 }
-
-
 .menu-right a {
     color: white;
     text-decoration: none;
@@ -71,11 +64,6 @@ body{
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
-}
-
-.menu-right a:hover {
-    color:  rgba(9, 1, 27, 1); 
-    transition: 1s;
 }
 
 /*conteudo*/
@@ -88,7 +76,6 @@ body{
     height: 650px;
     gap: 40px;
 }
-
 .displayleft{
     margin: auto;
     text-align: center;
@@ -98,13 +85,23 @@ body{
     background: rgba(9, 1, 27, 1);
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
+}
+
+.banner img{
+    width: 500px;
+    height: 100px;
+    border-radius: 10px;
+    background: white;
+    object-fit: cover; 
 }
 
 .displayright{
     width: 600px;
     height: 600px;
     display: flex;
+    gap: 20px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -118,7 +115,6 @@ body{
     height: 200px;
     text-align: left;
 }
-
 #title1, #title2{
     text-align: left;
     font-size: 50px;
@@ -128,7 +124,6 @@ body{
     font-style: normal;
     color: white;
 }
-
 #Paragrafo1{
     font-size: 10px;
     font-family: "Roboto", sans-serif;
@@ -138,20 +133,17 @@ body{
     width: 400px;
     height: 30px;
 }
-
 /*displayright*/
 .about{
     width: 500px;
     height: 150px;
     text-align: left;
 }
-
 .work{
     width: 500px;
     height: 150px;
     text-align: left;
 }
-
 #Tabout{
     font-size: 20px;
     font-family: "Montserrat Alternates", sans-serif;
@@ -161,28 +153,10 @@ body{
     color: white;
 }
 
-#Paragrafo2{
-    font-size: 15px;
-    font-family: "Montserrat Alternates", sans-serif;
-    font-weight: 300;
-    margin: auto;
-    font-style: normal;
-    color: white;
-}
-
 #TMywork{
     font-size: 20px;
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 700;
-    margin: auto;
-    font-style: normal;
-    color: white;
-}
-
-#Paragrafo3{
-    font-size: 15px;
-    font-family: "Montserrat Alternates", sans-serif;
-    font-weight: 300;
     margin: auto;
     font-style: normal;
     color: white;
@@ -213,8 +187,101 @@ body{
     width: 500px;
     height: 30px;
 }
+.buttonprojects {
+    width: 500px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    object-fit: cover; 
+ }
+ 
+ #buttonprojects{
+     padding: 30px 30px 30px 30px;
+     border-radius: 50%;
+     border: none;
+     cursor: pointer;
+ }
 
-  /* Responsivo */
+ #Pbutton{
+    width: 40px;
+    height: 40px;
+ }
+
+#Paragrafo2 {
+  font-size: 15px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 300;
+  margin: auto;
+  font-style: normal;
+  color: white;
+}
+
+#Paragrafo3{
+  font-size: 15px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 300;
+  margin: auto;
+  font-style: normal;
+  color: white;
+}
+ /*sessão projects*/
+.projects{
+  width: 100vw;
+  height: 100vh;
+}
+
+/*Animation*/
+.menu-left:hover{
+    color: rgb(17, 170, 3);
+    transition: 0.5s;
+}
+.menu-right a:hover {
+  color: rgb(17, 170, 3);
+  font-weight: 700;
+  transition: 0.5s;
+}
+
+#imggit:hover, #imginsta:hover, #imglink:hover, #imgwhat:hover{
+  width: 25px;
+  height: 25px;
+  transition: 0.5s;
+}
+
+#Paragrafo1 {
+  font-family: monospace;
+  white-space: normal; /* Permite que o texto quebre em linhas */
+  overflow: visible; /* Garante que o texto seja visível */
+  border-right: 0.15em solid;
+  animation: blink 0.75s step-end infinite;
+}
+
+.texts h1 span,
+.texts h3 span {
+  transition: color 0.3s ease; /* Transição suave */
+  color: white; /* Cor padrão das letras */
+}
+
+.texts h1 span:hover,
+.texts h3 span:hover {
+  color: rgb(17, 170, 3); /* Cor ao passar o mouse sobre cada letra */
+}
+
+.texts h1,
+.texts h3 {
+  display: inline-block;
+}
+
+
+@keyframes blink {
+  from, to {
+      border-color: transparent;
+  }
+  50% {
+      border-color: black;
+  }
+}
+
+/* Responsivo */
   
   @media (max-width: 768px) {
     .menu {
