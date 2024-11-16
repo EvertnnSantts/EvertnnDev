@@ -2,7 +2,6 @@ const Paragrafo1Text = "Web Developer | Specialist in JavaScript and MySQL | Sys
 const speed = 100; // Velocidade da digitação em milissegundos 
 let index1 = 0;
 
-
 // Função para envolver cada letra em um <span>
 function applyLetterEffect(elementId) {
   const element = document.getElementById(elementId);
