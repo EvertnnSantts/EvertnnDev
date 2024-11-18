@@ -5,18 +5,20 @@ let index1 = 0;
 // Função para envolver cada letra em um <span>
 function applyLetterEffect(elementId) {
   const element = document.getElementById(elementId);
-  const text = element.innerText;  // Obtém o texto original
-  element.innerHTML = text.split('').map(letter => `<span>${letter}</span>`).join('');
+  if (element) { // Verifica se o elemento existe
+    const text = element.innerText;  // Obtém o texto original
+    element.innerHTML = text.split('').map(letter => `<span>${letter}</span>`).join('');
+  }
 }
 
 // Aplicando o efeito aos elementos
 applyLetterEffect('title1');
 applyLetterEffect('title2');
 
-
 function typeParagrafo1() {
-  if (index1 < Paragrafo1Text.length) {
-    document.getElementById('Paragrafo1').innerHTML += Paragrafo1Text.charAt(index1);
+  const paraElement = document.getElementById('Paragrafo1');
+  if (paraElement && index1 < Paragrafo1Text.length) {
+    paraElement.innerHTML += Paragrafo1Text.charAt(index1);
     index1++;
     setTimeout(typeParagrafo1, speed);
   }
@@ -24,7 +26,20 @@ function typeParagrafo1() {
 
 typeParagrafo1();
 
-// Button
-document.getElementById('buttonprojects').addEventListener('click', function() {
-  document.querySelector('.projects').scrollIntoView({ behavior: 'smooth' });
+// Button - Scroll
+const buttonProject = document.getElementById('buttonprojects');
+if (buttonProject) {
+  buttonProject.addEventListener('click', function() {
+    document.querySelector('.projects').scrollIntoView({ behavior: 'smooth' });
+  });
+}
+
+// Click para mostrar/ocultar 'boxproject'
+document.querySelectorAll('.projeto').forEach(project => {
+  project.addEventListener('click', () => {
+    const boxProject = project.nextElementSibling; // Seleciona o próximo elemento (a 'boxproject')
+    if (boxProject) {
+      boxProject.classList.toggle('active');
+    }
+  });
 });
