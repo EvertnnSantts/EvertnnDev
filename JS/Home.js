@@ -30,16 +30,6 @@ typeParagrafo1();
 const buttonProject = document.getElementById('buttonprojects');
 if (buttonProject) {
   buttonProject.addEventListener('click', function() {
-    document.querySelector('.projects').scrollIntoView({ behavior: 'smooth' });
+    document.querySelector('.Secrionprojects').scrollIntoView({ behavior: 'smooth' });
   });
 }
-
-// Click para mostrar/ocultar 'boxproject'
-document.querySelectorAll('.projeto').forEach(project => {
-  project.addEventListener('click', () => {
-    const boxProject = project.nextElementSibling; // Seleciona o próximo elemento (a 'boxproject')
-    if (boxProject) {
-      boxProject.classList.toggle('active');
-    }
-  });
-});

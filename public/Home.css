@@ -13,16 +13,26 @@ body{
     background: rgba(56, 1, 166, 1);
 }
 
+
 /*menu*/
 .menu{
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 1250px;
+  z-index: 1000;
+  padding: 10px 0;
   height: 50px;
-  margin-top: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
   box-sizing: border-box;
+  background: rgba(56, 1, 166, 1);
+}
+
+main{
+  margin-top: 60px;
 }
 .dropdown {
     position: relative;
@@ -219,43 +229,51 @@ body{
 }
  /*sessão projects*/
 .Secrionprojects{
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  box-sizing: border-box;
+    width: 1250px;
+    height: 100vh;
 }
 
-.projects{
+.org4{
   width: 1250px;
-  height: 250px;
+  height: 400px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  gap: 40px;
 }
 
-.projeto{
-     width: 270px;
-     height: 200px;
-     border-radius: 5px;
-     background: honeydew;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     text-align: center;
-     cursor: pointer;
-     position: relative;
+.database, .js, .full{
+    width: 250px;
+    height: 250px;
+    background: rgb(38, 2, 111);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
 }
 
-.boxproject{
-    display: none;
+#titlrdatabase, #titlejs, #titlefull{
+  font-size: 25px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 700;
+  margin: auto;
+  font-style: normal;
+  color: white;
+  width: 200px;
 }
 
-.boxproject.active {
-  display: flex; /* Mostra quando a classe 'active' é adicionada */
+#desctiondatabase, #desctionjs, #desctionfull{
+  font-size: 10px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 200;
+  margin: auto;
+  font-style: normal;
+  color: white;
+  width: 200px;
+  height: 100px;
 }
-
 #linha1{
    width: 80%;
 }
@@ -383,21 +401,21 @@ footer{
     }
     .menu {
       padding: 0.5em;
-      height: 100px;
+      height: 70px;
+      background: rgba(56, 1, 166, 1);
       margin: auto;
     }
     .org {
       flex-direction: column;
       align-items: center;
       width: 100vw;
-      height: 900px;
+      height: 700px;
       }
 
     .displayleft {
       padding: 1em;
       width: 300px;
       height: 250px;
-      margin: auto;
     }
 
     .buttonprojects{
@@ -434,7 +452,7 @@ footer{
     }
 
     #title1, #title2 {
-      font-size: 1.5em;
+      font-size: 2.2em;
       width: 300px;
       margin: 0;
       margin-left: 100px;
